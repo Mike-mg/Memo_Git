@@ -110,6 +110,45 @@
 - Afficher les informations sur l'état actuel du dépot si besoin  
     - `git status`
 
+- Afficher l'historique des commits
+    - `git log`
+        - Afficher l'historique des commits en mode "graph" 
+            - `git log --graph`
+
+    - Afficher "x" commit  
+        - `git log -3`
+            - Affiche 3 commits
+    
+    - Afficher 4 commits avec le detail des modifications
+        - `git log -p -4`
+
+    - Afficher un commit specifique
+        - `git show "identifaitn_du_commit"`
+
+    - Afficher des informations supplémentaires, telles que les noms de branches et les tags, aux commits
+        - `git log --decorate`
+    
+    - Filtrer par auteur
+        - ` git log --author="<author>"`
+
+    - Filtrer par periode
+        - `git log --since="2023-01-01" --until="2023-01-31"`
+
+    - Comparer 2 commits
+        - `git diff "commit_1" "commit_2"`
+
+    - Comparer les différences entre le dernier commit et l’avant-dernier
+        - `git diff HEAD HEAD~1`
+
+    - Comparer 2 branches
+        - `git diff "branche_1" "branche_2"`
+
+    -  rechercher des mots-clés spécifiques dans l’historique des commits
+        - `git grep "mot_cle"`
+
+    - Quitter l'historique  
+        - Appuyer sur "Q" pour quitter
+
 - Affiche la liste des remotes configurées pour votre dépôt local  
     - `git remote -v`
 
@@ -139,9 +178,6 @@
 
      Une branche est une ligne de développement indépendante qui permet de travailler sur des modifications de manière isolée par rapport à la branche principale (généralement appelée « branche principale » ou « branche maître »).
 
-- Renommer la branche principale  
-    - `git branch -M <nom_de_la_nouvelle_branche>`
-
 - La création d'une nouvelle branche
     - `git branch <nom_de_branche>`
         
@@ -151,6 +187,15 @@
 
 - Basculer vers une branche existante
     - `git checkout <nom_de_la_branche>`
+
+- Connaite la liste des branches existantes
+    - `git branch --list`
+
+- supprimer une branche
+    - `git branch -d "nom_de_la_branche"`
+
+- supprimer une branche sans fusion avec la branche principale
+    - `git branch -D "nom_de_la_branche"`
 
 ####        
 ---

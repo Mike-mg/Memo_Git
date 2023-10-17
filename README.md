@@ -106,70 +106,60 @@
 ---
 ####
 
-### Commandes utiles
-
-- Afficher les informations sur l'état actuel du dépot si besoin  
-    - `git status`
+### Historique des commits
 
 - Afficher l'historique des commits
     - `git log`
-        - Afficher l'historique des commits en mode "graph" 
-            - `git log --graph`
 
-    - Afficher "x" commit  
-        - `git log -3`
-            - Affiche 3 commits
-    
-    - Afficher 4 commits avec le detail des modifications
-        - `git log -p -4`
+- Afficher l'historique des commits en mode "graph" 
+    - `git log --graph`
 
-    - Afficher un commit specifique
-        - `git show "identifaitn_du_commit"`
+- Afficher "x" commit  
+    - `git log -3`
+        - Affiche 3 commits
 
-    - Afficher des informations supplémentaires, telles que les noms de branches et les tags, aux commits
-        - `git log --decorate`
-    
-    - Filtrer par auteur
-        - ` git log --author="<author>"`
+- Afficher 4 commits avec le detail des modifications
+    - `git log -p -4`
 
-    - Filtrer par periode
-        - `git log --since="2023-01-01" --until="2023-01-31"`
+- Afficher un commit specifique
+    - `git show "identifaitn_du_commit"`
 
-    - Comparer 2 commits
-        - `git diff "commit_1" "commit_2"`
+- Afficher des informations supplémentaires, telles que les noms de branches et les tags, aux commits
+    - `git log --decorate`
 
-    - Comparer les différences entre le dernier commit et l’avant-dernier
-        - `git diff HEAD HEAD~1`
+- Filtrer par auteur
+    - ` git log --author="<author>"`
 
-    - Comparer 2 branches
-        - `git diff "branche_1" "branche_2"`
+- Filtrer par periode
+    - `git log --since="2023-01-01" --until="2023-01-31"`
 
-    -  rechercher des mots-clés spécifiques dans l’historique des commits
-        - `git grep "mot_cle"`
+- Comparer 2 commits
+    - `git diff "commit_1" "commit_2"`
 
-    - Quitter l'historique  
-        - Appuyer sur "Q" pour quitter
+- Comparer les différences entre le dernier commit et l’avant-dernier
+    - `git diff HEAD HEAD~1`
 
-- Affiche la liste des remotes configurées pour votre dépôt local  
-    - `git remote -v`
+-  rechercher des mots-clés spécifiques dans l’historique des commits
+    - `git grep "mot_cle"`
 
-- Pousse les modifications de votre branche locale vers la branche correspondante sur la remote  
-    - `git push <remote> <branche>`
-
-- Récupère les modifications de la branche sur la remote et les fusionne dans votre branche locale  
-    - `git pull <remote> <branche>`
+- Quitter l'historique  
+    - Appuyer sur "Q" pour quitter
 
 ####        
 ---
 ####
 
-### Les fichiers
 
-- Gitignore :
+### Commandes utiles
 
-    - C’est un fichier texte qui contient une liste de règles de filtrage pour exclure certains fichiers et répertoires du suivi de Git
+- Afficher les informations sur l'état actuel du dépot si besoin  
+    - `git status`
 
-    - Un repository sur Github propose un certain nombre de fichier .gitignore pour divers langages ou aller sur "gitignore.io" en ligne pour en créer un personnel
+    - Comparer 2 branches
+        - `git diff "branche_1" "branche_2"`
+
+- Affiche la liste des remotes configurées pour votre dépôt local  
+    - `git remote -v`
 
 ####        
 ---
@@ -198,6 +188,12 @@
 - Supprimer une branche sans fusion avec la branche principale
     - `git branch -D "nom_de_la_branche"`
 
+- Pousse les modifications de votre branche locale vers la branche correspondante sur la remote  
+    - `git push <remote> <branche>`
+
+- Récupère les modifications de la branche sur la remote et les fusionne dans votre branche locale  
+    - `git pull <remote> <branche>`
+
 ####        
 ---
 ####
@@ -205,3 +201,17 @@
 ### Les fusions ( Merge/Rebase )
 
 - En cours
+
+### Les fichiers
+
+- Gitignore :
+
+    - C’est un fichier texte qui contient une liste de règles de filtrage pour exclure certains fichiers et répertoires du suivi de Git
+
+    - Un repository sur Github propose un certain nombre de fichier .gitignore pour divers langages ou aller sur "gitignore.io" en ligne pour en créer un personnel
+
+####        
+---
+####
+
+---

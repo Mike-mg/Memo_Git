@@ -44,12 +44,12 @@
 ### Depuis un depot distant
 
 - Cloner un dépot distant  
-    - `git clone <nom_du_depot_distant>`
+    - `git clone nom_du_depot_distant`
 
 - Indexation de fichier ( fichier's' modifié's' )
 
     - Un fichier  
-        - `git add <nom_du_fichier>`
+        - `git add nom_du_fichier`
     
     - Plusieurs fichiers  
         - `git add .` <- Ne pas oublier le point
@@ -74,6 +74,7 @@
     - `echo "# test_projet" >> README.md`
 
 - Configurer la base de Git pour être lié à votre compte GitHub  
+    
     - Configure le username  
         - `git config --global user.name "Nom_createur_du_repository"`
 
@@ -188,13 +189,13 @@
 - Basculer vers une branche existante
     - `git checkout <nom_de_la_branche>`
 
-- Connaite la liste des branches existantes
+- Connaitre la liste des branches existantes
     - `git branch --list`
 
-- supprimer une branche
+- Supprimer une branche
     - `git branch -d "nom_de_la_branche"`
 
-- supprimer une branche sans fusion avec la branche principale
+- Supprimer une branche sans fusion avec la branche principale
     - `git branch -D "nom_de_la_branche"`
 
 ####        
@@ -204,4 +205,3 @@
 ### Les fusions ( Merge/Rebase )
 
 - En cours
-

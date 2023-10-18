@@ -44,7 +44,7 @@
 ### Depuis un depot distant
 
 - Cloner un dépot distant  
-    - `git clone nom_du_depot_distant`
+    -`git clone nom_du_depot_distant`
 
 - Indexation de fichier ( fichier's' modifié's' )
 
@@ -200,8 +200,30 @@
 
 ### Les fusions ( Merge/Rebase )
 
-- En cours
+- Le merge
 
+        Le git merge est une opération qui permet de fusionner 2 ou plusieurs branches en une seule, en créant un nouveau commit qui contient les modifications des branches fusionnées.
+        
+    - Se placer sur la branche principale "main"
+        - `git checkout main`
+
+    - Ensuite fusionée les deux branche  
+        - `git merge branche_a_fusionneé`
+
+    - En cas de conflit git le spécifira et la résolution devra etre faites à la main, une fois les conflits reglé éxecuter les commandes suivantes
+        - `git add -A`
+            - La commande git add -A est une commande Git qui permet d'ajouter tous les fichiers modifiés, supprimés et nouvellement créés à l'index Git
+
+        - Faire un commit pour finaliser le merge
+            - `git commit -m "fusion_de_la_nouvelle_branche"`
+
+    - Utilisez la commande "git status" pour vérifier que les fichiers ont bien été ajoutés à l'index.
+        - `git status`
+
+
+
+
+    
 ### Les fichiers
 
 - Gitignore :
@@ -214,4 +236,7 @@
 ---
 ####
 
+
+
+new_branche_2
 ---

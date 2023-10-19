@@ -44,7 +44,7 @@
 ### Depuis un depot distant
 
 - Cloner un dépot distant  
-    -`git clone nom_du_depot_distant`
+    - `git clone nom_du_depot_distant`
 
 - Indexation de fichier ( fichier's' modifié's' )
 
@@ -86,9 +86,6 @@
 
 - Initialiser le repository  
     - `git init`
-
-- Créer la branche "main"  
-    - `git branch -M main`
 
 - Indexer les fichiers  
     - `git add .`
@@ -149,22 +146,6 @@
 ---
 ####
 
-
-### Commandes utiles
-
-- Afficher les informations sur l'état actuel du dépot si besoin  
-    - `git status`
-
-    - Comparer 2 branches
-        - `git diff "branche_1" "branche_2"`
-
-- Affiche la liste des remotes configurées pour votre dépôt local  
-    - `git remote -v`
-
-####        
----
-####
-
 ### Les branches  
 
      Une branche est une ligne de développement indépendante qui permet de travailler sur des modifications de manière isolée par rapport à la branche principale (généralement appelée « branche principale » ou « branche maître »).
@@ -182,11 +163,17 @@
 - Connaitre la liste des branches existantes
     - `git branch --list`
 
+- Connaitre le SHA de la branche
+    - `git rev-parse nom_de_la_branche`
+
 - Supprimer une branche
     - `git branch -d "nom_de_la_branche"`
 
 - Supprimer une branche sans fusion avec la branche principale
     - `git branch -D "nom_de_la_branche"`
+
+- Comparer 2 branches
+    - `git diff "branche_1" "branche_2"`
 
 - Pousse les modifications de votre branche locale vers la branche correspondante sur la remote  
     - `git push <remote> <branche>`
@@ -214,16 +201,37 @@
         - `git add -A`
             - La commande git add -A est une commande Git qui permet d'ajouter tous les fichiers modifiés, supprimés et nouvellement créés à l'index Git
 
-        - Faire un commit pour finaliser le merge
-            - `git commit -m "fusion_de_la_nouvelle_branche"`
+        - Finaliser le merge
+            - `git merge --continue`
 
     - Utilisez la commande "git status" pour vérifier que les fichiers ont bien été ajoutés à l'index.
         - `git status`
 
 
+- Le rebase
 
+        Le git rebase est une opération qui permet de fusionner des branches, mais en réécrivant l'historique de développement de manière linéaire. Cette opération déplace tous les commits de la branche à fusionner en amont de la branche cible, ce qui crée un historique de développement plus facile à comprendre et à gérer. Cependant, le Git rebase peut être plus complexe à utiliser et peut provoquer des conflits lorsqu'il réécrit l'historique de développement.
+        
+    - Se placer sur la branche principale "dev"
+        - `git checkout dev`
 
-    
+    - Ensuite fusionée les deux branches  
+        - `git rebase main`
+
+    - En cas de conflit git le spécifira et la résolution devra etre faites à la main, une fois les conflits reglé éxecuter les commandes suivantes
+        - `git add -A`
+            - La commande git add -A est une commande Git qui permet d'ajouter tous les fichiers modifiés, supprimés et nouvellement créés à l'index Git
+
+        - Finaliser le merge
+            - `git rebase --continue`
+
+    - Utilisez la commande "git status" pour vérifier que les fichiers ont bien été ajoutés à l'index.
+        - `git status`
+
+####        
+---
+####
+
 ### Les fichiers
 
 - Gitignore :
@@ -236,28 +244,10 @@
 ---
 ####
 
+### Commandes utiles
 
-- line 240 test merge
+- Afficher les informations sur l'état actuel du dépot si besoin  
+    - `git status`
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-new_branche
----
->>>>>>> new_branche
+- Affiche la liste des remotes configurées pour votre dépôt local  
+    - `git remote -v`

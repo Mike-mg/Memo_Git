@@ -1,41 +1,57 @@
 # Memo Git
 
-### Bon à savoir ...
+### Les depots  
 
-1) Les depots  
+- Depot local (Local Repository).
+    - Le dépôt local est la copie du projet Git présente sur votre machine locale.
 
-    - Depot local (Local Repository).
-        - Le dépôt local est la copie du projet Git présente sur votre machine locale.
+- Depot distant (Remote).
+    - Le dépôt distant est une copie du dépôt local située sur un serveur ou un service de gestion de code source
 
-    - Depot distant (Remote).
-        - Le dépôt distant est une copie du dépôt local située sur un serveur ou un service de gestion de code source
+    - /!\ ATTENTION /!\
+        - Pour pouvoir pousser des modifications sur le serveur, il est important de s’assurer que le repository local est à jour, c'est-à-dire qu’il a bien récupéré les dernières modifications. Si nous essayons de pousser des modifications alors que des modifications sur le serveur ne sont pas présentes en local, git nous générera une erreur.
 
-        - /!\ ATTENTION /!\
-            - Pour pouvoir pousser des modifications sur le serveur, il est important de s’assurer que le repository local est à jour, c'est-à-dire qu’il a bien récupéré les dernières modifications. Si nous essayons de pousser des modifications alors que des modifications sur le serveur ne sont pas présentes en local, git nous générera une erreur.
+### Type de zones de stockages  
 
-2) Type de zones de stockages  
-    - Workspace.
-        - Répertoire de travail ou sont les fichiers non-modifiés et modifiés
+- Workspace.
+    - Répertoire de travail ou sont les fichiers non-modifiés et modifiés
 
-    - Index ou zone de staging.
-        - Zone intermédiaire avant le commit
+- Index ou zone de staging.
+    - Zone intermédiaire avant le commit
 
-    - Repository.
-        - Le dépot ou est sauvegarder le projet
+- Repository.
+    - Le dépot ou est sauvegarder le projet
 
-3) Les états de fichiers  
+### Les états de fichiers  
 
-    - Untracked.
-        - Non suivi, nouveau fichier pas encore indexer
+- Untracked.
+    - Non suivi, nouveau fichier pas encore indexer
 
-    - Unmodified.
-        - Fichier non modifié
+- Unmodified.
+    - Fichier non modifié
 
-    - Modified.
-        - fichier à indéxer
+- Modified.
+    - fichier à indéxer
 
-    - Staged.
-        - Fichier indéxer pret pour le commit  
+- Staged.
+    - Fichier indéxer pret pour le commit  
+
+### Gestion des branches et types
+    
+- Master ou Main  
+    - La branche « master » ou « main » représente la branche principale du projet. Elle devrait contenir la version la plus stable et la plus à jour du code.
+
+- Dev
+    - La branche « dev » est la branche de développement principale. Les développeurs travaillent sur cette branche pour ajouter de nouvelles fonctionnalités et effectuer des modifications importantes du code.
+
+- Release  
+    - La branche « release » est créée à partir de la branche « dev » pour préparer une version du projet pour une publication ou une mise en production. Les corrections de bugs mineurs sont effectuées sur cette branche et elle est soumise à des tests approfondis avant d’être fusionnée avec la branche principale.
+
+- Hotfix
+    - La branche « hotfix » est créée à partir de la branche « master » pour corriger rapidement des bugs critiques qui ne peuvent pas attendre la prochaine version du projet. Les corrections apportées à cette branche sont testées et fusionnées avec la branche principale dès que possible.
+
+- Feature
+    - La branche « feature » est créée à partir de la branche « dev » pour ajouter de nouvelles fonctionnalités ou des modifications importantes du code. Cette branche est soumise à des tests et des relectures avant d’être fusionnée avec la branche principale.  
 
 ####        
 ---
@@ -108,6 +124,9 @@
 - Afficher l'historique des commits
     - `git log`
 
+- Quitter l'historique  
+    - Appuyer sur "Q" pour quitter
+
 - Afficher l'historique des commits en mode "graph" 
     - `git log --graph`
 
@@ -136,11 +155,8 @@
 - Comparer les différences entre le dernier commit et l’avant-dernier
     - `git diff HEAD HEAD~1`
 
--  rechercher des mots-clés spécifiques dans l’historique des commits
+-  Rechercher des mots-clés spécifiques dans l’historique des commits
     - `git grep "mot_cle"`
-
-- Quitter l'historique  
-    - Appuyer sur "Q" pour quitter
 
 ####        
 ---
@@ -251,3 +267,15 @@
 
 - Affiche la liste des remotes configurées pour votre dépôt local  
     - `git remote -v`
+
+- Configurer l'alias graph pour le git log dans la config global  
+    - `git config --global alias.graph "log --all --graph --decorate --oneline"`
+
+- Cette commande permet de voir les modifications qui seront incluses dans le commit. Pour afficher les différences entre l’index et le dernier commit  
+    - `git diff --cached`
+
+####        
+---
+####
+
+
